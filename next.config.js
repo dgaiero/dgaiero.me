@@ -1,8 +1,13 @@
 /* eslint-disable */
+require('dotenv').config()
 const withCss = require('@zeit/next-css')
 
 module.exports = withCss({
    webpack: (config, { isServer }) => {
+      env: {
+         sendgrid_api_key: process.env.sendgrid_api_key;
+         contact_email_from_address: process.env.contact_email_from_address
+      };
       if (isServer) {
          const antStyles = /antd\/.*?\/style\/css.*?/
          const origExternals = [...config.externals]
