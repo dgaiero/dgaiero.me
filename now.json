@@ -1,7 +1,9 @@
 {
    "version": 2,
-   "builds": [{
-      "src": "package.json",
-      "use": "@now/next"
-   }]
+   "build": {
+      "env": {
+         "SENDGRID_API_KEY": "@sendgrid_api_key",
+         "CONTACT_EMAIL_FROM_ADDRESS": "@contact_email_from_address"
+      }
+   }
 }
