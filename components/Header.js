@@ -4,7 +4,6 @@ import Contact from '../components/Contact'
 import { withRouter } from 'next/router'
 import Router from 'next/router'
 import { Layout, Menu } from 'antd';
-import "../style.less";
 
 const { Header, Content, Footer } = Layout;
 

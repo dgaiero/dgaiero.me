@@ -116,3 +116,4 @@ dist
 
 # env files
 *.env
+.now
