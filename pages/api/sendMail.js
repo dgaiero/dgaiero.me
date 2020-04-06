@@ -1,12 +1,12 @@
 const sgMail = require('@sendgrid/mail');
 
 export default async function(req, res) {
-   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+   sgMail.setApiKey(process.env.sendgrid_api_key);
    const {name, email, subject, message} = req.body;
    // console.log(`Got ${name} at ${email} with subject ${subject} and message of ${message}`)
 
    const content = {
-      to: process.env.CONTACT_EMAIL_FROM_ADDRESS,
+      to: process.env.contact_email_from_address,
       cc: email,
       from: email,
       subject: subject ? `[dgaiero.me] | ${subject}` : `[dgaiero.me] | Inquiry from ${name}`,
