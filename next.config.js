@@ -12,8 +12,8 @@ const themeVariables = lessToJS(fs.readFileSync(path.resolve(__dirname, './asset
 
 const nextConfig = {
    env: {
-      spaceID: process.env.spaceID,
-      accessTokenDelivery: process.env.accessTokenDelivery,
+      SENDGRID_API_KEY: process.env.SENDGRID_API_KEY,
+      CONTACT_EMAIL_FROM_ADDRESS: process.env.CONTACT_EMAIL_FROM_ADDRESS,
    },
    distDir: '.next',
 };
