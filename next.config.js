@@ -7,6 +7,7 @@ module.exports = withCss({
       env: {
          sendgrid_api_key: process.env.sendgrid_api_key;
          contact_email_from_address: process.env.contact_email_from_address
+      };
       if (isServer) {
          const antStyles = /antd\/.*?\/style\/css.*?/
          const origExternals = [...config.externals]
