@@ -2,9 +2,9 @@ require('dotenv').config();
 const lessToJS = require('less-vars-to-js')
 const fs = require('fs')
 const path = require('path');
-const withSass = require('@zeit/next-sass');
+// const withSass = require('@zeit/next-sass');
 const withLess = require('@zeit/next-less');
-// const withCSS = require('@zeit/next-css');
+const withCSS = require('@zeit/next-css');
 const withPlugins = require('next-compose-plugins');
 
 // Where your antd-custom.less file lives
@@ -19,7 +19,9 @@ const nextConfig = {
 };
 
 const plugins = [
-   // withCSS,
+   withCSS({
+      cssModules: true
+   }),
    withLess({
       lessLoaderOptions: {
          javascriptEnabled: true,
@@ -44,11 +46,15 @@ const plugins = [
             config.module.rules.unshift({
                test: antStyles,
                use: 'null-loader',
+            },
+            {
+               test: /\.(png|jp(e*)g|svg|gif)$/,
+               use: ['@svgr/webpack']
             });
          }
          return config;
       },
    }),
-   withSass,
+   // withSass,
 ];
 module.exports = withPlugins(plugins, nextConfig);

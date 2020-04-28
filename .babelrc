@@ -1,7 +1,17 @@
 {
    "presets": ["next/babel"],
-   "plugins": [
-      [
+   "plugins": 
+      ["inline-react-svg",
+         "@babel/syntax-dynamic-import",
+         [
+            "lodash",
+            {
+               "id": [
+                  "lodash",
+               ]
+            }
+         ],
+         [
          "import",
          {
             "libraryName": "antd",
