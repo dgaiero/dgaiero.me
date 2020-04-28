@@ -1,5 +1,9 @@
 {
    "version": 2,
+   "env": {
+      "SENDGRID_API_KEY": "@sendgrid_api_key",
+      "CONTACT_EMAIL_FROM_ADDRESS": "@contact_email_from_address"
+   },
    "build": {
       "env": {
          "SENDGRID_API_KEY": "@sendgrid_api_key",

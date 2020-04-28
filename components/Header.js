@@ -1,11 +1,21 @@
-import { PageHeader } from 'antd';
-import React from 'react'
-import Contact from '../components/Contact'
-import { withRouter } from 'next/router'
-import Router from 'next/router'
 import { Layout, Menu } from 'antd';
 
+import Contact from '../components/Contact'
+import { HeaderLogo } from '../public/static/images/logos/logos_name-light.svg'
+import { PageHeader } from 'antd';
+import React from 'react'
+import Router from 'next/router'
+import { withRouter } from 'next/router'
+
 const { Header, Content, Footer } = Layout;
+
+const headerSvgProps = {
+   height: '80%',
+   position: 'absolute',
+   top: '50%',
+   'msTransform': 'translateY(-50%)',
+   transform: 'translateY(-50%)',
+}
 
 class SiteHeader extends React.Component {
    constructor(props) {
@@ -24,10 +34,10 @@ class SiteHeader extends React.Component {
       });
       switch (e.key) {
          case "/contact":
-            this.setState(prevState => ({ showContact: !prevState.showContact}));
+            this.setState(prevState => ({ showContact: !prevState.showContact }));
             break;
-      default:
-         Router.push(e.key);
+         default:
+            Router.push(e.key);
       }
    };
 
@@ -38,44 +48,40 @@ class SiteHeader extends React.Component {
          selectedHeaderKeys: [this.props.router.pathname],
       });
    };
-   
+
    render() {
       const { pathname } = this.props.router;
       return (
-      <>
-         <Header className="header">
-            <div className="logo">
-               <img src="/static/images/signatures-01.png" />
-            </div>
+         <>
+            <Header className="header">
+               <div className="logo">
+                  <HeaderLogo style={headerSvgProps} />
+               </div>
                <Menu onClick={this.handleClick}
                   theme="dark"
                   mode="horizontal"
                   defaultSelectedKeys={[pathname]}
                   selectedKeys={this.state.selectedHeaderKeys}>
-               <Menu.Item key="/">Home</Menu.Item>
-               <Menu.Item key="/about" disabled>About Me</Menu.Item>
-               <Menu.Item key="/contact">Contact</Menu.Item>
-            </Menu>
-         </Header>
-            <Contact visible={this.state.showContact} onClose={this.closeContactForm}/>
-         <style jsx>
-            {`
+                  <Menu.Item key="/">Home</Menu.Item>
+                  {/* <Menu.Item key="/about" disabled>About Me</Menu.Item> */}
+                  <Menu.Item key="/contact">Contact</Menu.Item>
+               </Menu>
+            </Header>
+            <Contact visible={this.state.showContact} onClose={this.closeContactForm} />
+            <style jsx>
+               {`
          .logo {
             width: 120px;
-            height: 31px;
-            // background: rgba(255, 255, 255, 0.2);
+            height: 100%;
+            position: relative;
             margin: 0 28px 0 0;
             float: left;
-         }
-         .logo img {
-            filter: invert(100%);
-            object-fit: cover;
-            width: 100%;
-         }
+         }              
          `}
-         </style>
-      </>
-      )};
+            </style>
+         </>
+      )
+   };
 };
 
 export default withRouter(SiteHeader);

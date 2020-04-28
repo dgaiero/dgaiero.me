@@ -1,5 +1,5 @@
-import { Drawer, Form, Button, Col, Row, Input, message, Alert } from 'antd';
-import React, { useState, useEffect } from 'react'
+import { Alert, Button, Col, Drawer, Form, Input, Row, message } from 'antd';
+import React, { useEffect, useState } from 'react'
 
 export default (props) => {
    const { visible, onClose } = props;
@@ -42,7 +42,6 @@ export default (props) => {
          setStatus({
             info: { error: true, msg: m }
          })
-         console.log(status.info.msg)
          msg = message.error(`Error: ${m}`)
       }
       onClose();
