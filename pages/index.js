@@ -30,10 +30,10 @@ function Index() {
                {/* <Breadcrumb style={{ margin: '16px 0' }} /> */}
                <div className="site-layout-content-header-wrapper">
                   <div className="site-layout-content-header">
-                     {/* <div className="headshot-image-frame"><img className="headshot-image" src="/static/images/headshot.jpg" /></div> */}
                      <div className="header-image-picture-wrapper">
                         {/* <Col> */}
-                           <figure className="headshot-image-frame"><img className="headshot-image" src="https://picsum.photos/1088/933.jpg" /></figure>
+                           <figure className="headshot-image-frame"><img className="headshot-image" src="/static/images/headshot.jpg" /></figure>
+                           {/* <figure className="headshot-image-frame"><img className="headshot-image" src="https://picsum.photos/1088/933.jpg" /></figure> */}
                            <span className="hello-index">hi there.</span>
                         {/* </Col>
                         <Col>
