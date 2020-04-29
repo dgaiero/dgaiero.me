@@ -25,15 +25,10 @@ body {
 }
 
 .headshot-image-frame {
-   // display: inline-block;
-   // position: absolute;
    float: right;
-   // margin: -111px -150px 10px 10px;
    margin: -8em -8em 0.75em 0.75em;
-   // top: -8em;
-   // right: -8em;
-   @media screen and (max-width: 1485px) {
-      margin: -10em -2.5em 0.75em 0.75em;
+   @media screen and (max-width: 920px) {
+      margin: -8em 1.25em 0.75em 0.75em;
    }
    @media screen and (max-width: 768px) {
       margin: 0;
@@ -41,20 +36,6 @@ body {
    }
 }
 
-// .headshot-image-frame::before {
-//    position: absolute;
-//    top: -20px;
-//    left: 20px;
-//    width: 100%;
-//    height: 100%;
-//    border: 10px solid #aa7e02;
-//    opacity: 0.95;
-//    content: '';
-// }
-
-// .headshot-image-frame:hover::before {
-//    transform: translate(5px, -5px);
-// }
 .headshot-image {
    // margin: 2em;
    float: right;
@@ -69,17 +50,18 @@ body {
    }
 }
 
-.underline {
+.underline-link {
    background-image: linear-gradient(#1e1a11, #1e1a11);
    background-repeat: no-repeat;
    background-size: 0% 0.2em;
    background-position: 0 100%;
-   transition: background-size 0.25s ease-in;
+   transition: background-size 0.25s ease;
+   -webkit-transition: background-size 0.25s ease;
    color: #1e1a17;
 }
 
-.underline:hover,
-.underline:focus {
+.underline-link:hover,
+.underline-link:focus {
    background-size: 100% 0.2em;
    color: #1e1a17;
 }
@@ -120,6 +102,19 @@ body {
       bottom: 0;
       mix-blend-mode: unset;
    }
+   @media screen and (max-width: 497px) {
+      font-size: 5em;
+   }
+}
+
+.hi-there {
+   height: 9em;
+   @media screen and (max-width: 768px) {
+      position: absolute;
+      z-index: 1;
+      bottom: 0;
+   }
+
    @media screen and (max-width: 497px) {
       font-size: 5em;
    }
