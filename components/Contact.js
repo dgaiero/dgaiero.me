@@ -1,3 +1,5 @@
+import '../assets/less/contact/main.less'
+
 import { Alert, Button, Col, Drawer, Form, Input, Row, message } from 'antd';
 import React, { useEffect, useState } from 'react'
 
@@ -80,7 +82,8 @@ export default (props) => {
       <div>
          <Drawer
             title="Contact Me"
-            width={720}
+            keyboard
+            className="contact-drawer"
             onClose={onClose}
             visible={visible}
             bodyStyle={{ paddingBottom: 80 }}
