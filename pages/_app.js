@@ -8,7 +8,7 @@ import { notification } from 'antd';
 
 const showConstructionBanner = () => {
    notification.info({
-      message: 'Pardon the mess',
+      message: 'Pardon the mess!',
       description:
          "I'm still working on this website, and it is currently under construction.",
    });
