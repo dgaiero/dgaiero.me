@@ -37,8 +37,8 @@ function Index() {
                   <div className="site-layout-content-header">
                      <div className="header-image-picture-wrapper">
                         {/* <Col> */}
-                           {/* <figure className="headshot-image-frame"><img className="headshot-image" src="/static/images/headshot.jpg" /></figure> */}
-                           <figure className="headshot-image-frame"><img className="headshot-image" src="https://picsum.photos/1088/933.jpg" /></figure>
+                           <figure className="headshot-image-frame"><img className="headshot-image" src="/static/images/headshot.webp" /></figure>
+                           {/* <figure className="headshot-image-frame"><img className="headshot-image" src="https://picsum.photos/1088/933.jpg" /></figure> */}
                            <span className="hello-index">hi there.</span>
                            {/* <HiThere className="hi-there"/> */}
                         {/* </Col>

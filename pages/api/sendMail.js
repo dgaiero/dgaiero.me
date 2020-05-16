@@ -7,7 +7,7 @@ export default async function(req, res) {
    const content = {
       to: process.env.CONTACT_EMAIL_FROM_ADDRESS,
       cc: email,
-      from: email,
+      from: `${email.replace("@","%")}.${process.env.CONTACT_EMAIL_FROM_ADDRESS}`,
       subject: subject ? `[dgaiero.me] | ${subject}` : `[dgaiero.me] | Inquiry from ${name}`,
       text: `Email from: ${email}\nName: ${name}\nMessage:\n${message}`,
       html: `
