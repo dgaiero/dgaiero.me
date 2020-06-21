@@ -17,6 +17,12 @@ const headerSvgProps = {
    transform: 'translateY(-50%)',
 }
 
+const headerProps = {
+   width: '100%',
+   position: 'fixed',
+   zIndex: 1,
+}
+
 class SiteHeader extends React.Component {
    constructor(props) {
       super(props);
@@ -53,12 +59,12 @@ class SiteHeader extends React.Component {
       const { pathname } = this.props.router;
       return (
          <>
-            <Header className="header">
+            <Header className="header" style={headerProps}>
                <div className="logo">
                   <HeaderLogo style={headerSvgProps} />
                </div>
                <Menu onClick={this.handleClick}
-                  theme="dark"
+                  // theme="dark"
                   mode="horizontal"
                   defaultSelectedKeys={[pathname]}
                   selectedKeys={this.state.selectedHeaderKeys}>
