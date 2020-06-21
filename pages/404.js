@@ -1,11 +1,12 @@
-import { Result, Button } from 'antd';
+import { Button, Result } from 'antd';
+
+import Head from '../components/Head'
 import Router from 'next/router'
-import Title from '../components/Title'
 
 export default function ErrorPage() {
    return (
       <>
-         <title><Title name="Page not Found"></Title></title>
+         <Head title="Page not Found" />
    <Result
       status="404"
       title="404"
