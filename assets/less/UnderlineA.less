@@ -1,0 +1,15 @@
+.underline-link {
+   background-image: linear-gradient(@text-color, @text-color);
+   background-repeat: no-repeat;
+   background-size: 0% 0.2em;
+   background-position: 0 100%;
+   transition: background-size 0.25s ease;
+   -webkit-transition: background-size 0.25s ease;
+   color: @text-color;
+}
+
+.underline-link:hover,
+.underline-link:focus {
+   background-size: 100% 0.2em;
+   color: @text-color;
+}

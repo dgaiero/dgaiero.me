@@ -1,0 +1,114 @@
+.welcome-card-wrapper {
+   background: @white;
+   position: relative;
+   width: 50%;
+   margin: 7em auto;
+   box-shadow:
+      0 2.8px 2.2px fade(@black, 3.4%),
+      0 6.7px 5.3px fade(@black, 4.8%),
+      0 12.5px 10px fade(@black, 6%),
+      0 22.3px 17.9px fade(@black, 7.2%),
+      0 41.8px 33.4px fade(@black, 8.6%),
+      0 100px 80px fade(@black, 12%);
+
+   @media screen and (max-width: 1630px) {
+      width: 65%;
+   }
+
+   @media screen and (max-width: 1148px) {
+      width: 85%;
+   }
+
+   @media screen and (max-width: 920px) {
+      width: 100%;
+   }
+
+   @media screen and (max-width: 768px) {
+      margin: unset;
+   }
+
+}
+
+.hi-there-text {
+   background-color: @primary-color;
+   color: @white;
+   font-size: 7em;
+   font-family: depot-new-web, sans-serif;
+   font-weight: 700;
+   font-style: normal;
+   mix-blend-mode: darken;
+   cursor: default;
+   padding: 0 0.5vw 0 0.5vw;
+   line-height: normal;
+   height: fit-content;
+
+   -webkit-touch-callout: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+
+   @media screen and (max-width: 768px) {
+      position: absolute;
+      z-index: 1;
+      bottom: 0;
+      mix-blend-mode: unset;
+   }
+
+   @media screen and (max-width: 497px) {
+      font-size: 5em;
+   }
+}
+
+.welcome-card {
+   padding: 24px;
+   // position: absolute;
+}
+
+.welcome-card-headshot-wrapper {
+   @media screen and (max-width: 768px) {
+      width: 100%;
+      position: relative;
+   }
+}
+
+.welcome-card-headshot {
+   float: right;
+   margin: -8em -8em 0.75em 0.75em;
+
+   @media screen and (max-width: 920px) {
+      margin: -8em 1.25em 0.75em 0.75em;
+   }
+
+   @media screen and (max-width: 768px) {
+      margin: 0;
+      float: unset;
+   }
+}
+
+.welcome-card-headshot img {
+   float: right;
+   height: 20em;
+   -webkit-filter: grayscale(100%);
+   filter: grayscale(100%);
+
+   @media screen and (max-width: 768px) {
+      width: 100%;
+      float: unset;
+      height: unset;
+   }
+}
+
+.welcome-card p {
+
+   width: 100%;
+   font-size: 1.6em;
+   font-family: masqualero, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+   text-indent: 1.5715em;
+   margin: 0;
+   text-align: justify;
+   z-index: 1;
+}
