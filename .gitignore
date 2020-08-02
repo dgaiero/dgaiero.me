@@ -115,5 +115,5 @@ dist
 .pnp.*
 
 # env files
-*.env
+*.env*
 .now

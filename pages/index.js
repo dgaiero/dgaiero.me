@@ -16,10 +16,10 @@ import UA from '../components/UnderlineA'
 
 const { Content } = Layout;
 
-export default function() {
+export default function () {
    return (
       <>
-      <Head title="Home"/>
+         <Head title="Home" />
          {/* <Head>
             <title>Test</title>
             <Title name="Home"/>
@@ -31,17 +31,29 @@ export default function() {
                <div className="welcome-card-wrapper">
                   <div className="welcome-card">
                      <div className="welcome-card-headshot-wrapper">
-                           <figure className="welcome-card-headshot">
-                              <img
-                                 src="/static/images/headshot.webp"
+                        <figure className="welcome-card-headshot">
+                           <picture>
+                              <source
+                                 srcset="/static/images/gaiero_dominic_headshot.webp"
+                                 type="image/webp"
                               />
-                           </figure>
-                           <span className="hi-there-text">hi there.</span>
+                              <source
+                                 srcset="/static/images/gaiero_dominic_headshot.jpg"
+                                 type="image/jpeg"
+                              />
+                              <img
+                                 src="/static/images/gaiero_dominic_headshot.jpg"
+                                 alt="headshot"
+                              />
+                           </picture>
+                        </figure>
+                        <span className="hi-there-text">hi there.</span>
                      </div>
                      <div style={{ marginTop: 16 }}>
                         <p>
-                           I'm Dominic, currently attending <UA href="https://calpoly.edu" text="Cal Poly San Luis Obisp" _blank />{NBSP}
-                           studying computer engineering. Some random text here. I'm gonna put a lot of random text in this area so that it grows to multiple lines. Some random text here. I'm gonna put a lot of random text in this area so that it grows to multiple lines. Some random text here. I'm gonna put a lot of random text in this area so that it grows to multiple lines. Some random text here. I'm gonna put a lot of random text in this area so that it grows to multiple lines.
+                           I’m Dominic, a recent computer engineering graduate from <UA href="https://calpoly.edu" text="Cal Poly San Luis Obispo" _blank />.{NBSP}
+                           Currently, I’m pursuing my master’s in electrical engineering, also at Cal Poly, San Luis Obispo. With my specialization, I’ll be  making embedded systems. In the meantime, I’ve developed my skills in x, y, z,… both as a student and during my 4 undergrad summer internships at Lockheed-Martin.
+I’m kind of a stickler for details, in both my professional and personal endeavors. I have learned to appreciate great documentation inside and outsidde the workplace. I’m that guy who annotates everything and have even been accused of over-achieving when documenting a new recipe. Which ties into my hobbies. In my spare time, I enjoy cooking, particularly breadmaking. I also enjoy photography and hiking.
                         </p>
                      </div>
                   </div>
