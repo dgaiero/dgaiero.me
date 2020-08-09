@@ -1,4 +1,4 @@
-https://github.com/timothymiller/mern-ant-design-graphql-next-template/blob/master/next.config.js
+// https://github.com/timothymiller/mern-ant-design-graphql-next-template/blob/master/next.config.js
 
 // Serve images in WebP where available & at reduced size when possible.
 const withOptimizedImages = require('next-optimized-images')
