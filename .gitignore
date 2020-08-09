@@ -117,3 +117,5 @@ dist
 # env files
 *.env*
 .now
+.vercel
+.mdx-data
