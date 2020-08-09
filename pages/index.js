@@ -27,18 +27,18 @@ export default function () {
          </Head> */}
          <Layout style={{ height: '100%' }}>
             <Header />
-            <Content className="home-page-container">
+            <Content className="container-defaults home-page-container">
                <div className="welcome-card-wrapper">
                   <div className="welcome-card">
                      <div className="welcome-card-headshot-wrapper">
                         <figure className="welcome-card-headshot">
                            <picture>
                               <source
-                                 srcset="/static/images/gaiero_dominic_headshot.webp"
+                                 srcSet="/static/images/gaiero_dominic_headshot.webp"
                                  type="image/webp"
                               />
                               <source
-                                 srcset="/static/images/gaiero_dominic_headshot.jpg"
+                                 srcSet="/static/images/gaiero_dominic_headshot.jpg"
                                  type="image/jpeg"
                               />
                               <img

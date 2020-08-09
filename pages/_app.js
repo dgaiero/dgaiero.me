@@ -3,6 +3,7 @@
 import '../App.less'
 
 import App from 'next/app';
+import Head from 'next/Head'
 import { Provider } from 'react-redux';
 import WrenchIcon from '../components/icons/WrenchIcon'
 import { notification } from 'antd';
@@ -54,9 +55,15 @@ class MainApp extends App {
       const { Component, pageProps } = this.props;
 
       return (
+         <>
+
          <Provider store={store}>
+            <Head>
+               <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            </Head>
             <Component {...pageProps} />
          </Provider>
+         </>
       );
    }
 }
