@@ -1,0 +1,36 @@
+@import "../importer.less";
+
+.container-post {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.post-md {
+   margin: 50px 0 200px 0;
+   padding: 25px;
+   background-color: @component-background;
+   box-shadow:
+      0 2.8px 2.2px fade(@black, 3.4%),
+      0 6.7px 5.3px fade(@black, 4.8%),
+      0 12.5px 10px fade(@black, 6%),
+      0 22.3px 17.9px fade(@black, 7.2%),
+      0 41.8px 33.4px fade(@black, 8.6%),
+      0 100px 80px fade(@black, 12%);
+   width: 75%;
+   @media screen and (max-width: 1630px) {
+      width: 65%;
+   }
+
+   @media screen and (max-width: 1148px) {
+      width: 85%;
+   }
+
+   @media screen and (max-width: 920px) {
+      width: 100%;
+   }
+
+   @media screen and (max-width: 768px) {
+      margin: unset;
+   }
+}
