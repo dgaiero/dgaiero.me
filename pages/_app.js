@@ -3,7 +3,7 @@
 import '../App.less'
 
 import App from 'next/app';
-import Head from 'next/Head'
+import Head from 'next/head'
 import { Provider } from 'react-redux';
 import WrenchIcon from '../components/icons/WrenchIcon'
 import { notification } from 'antd';
