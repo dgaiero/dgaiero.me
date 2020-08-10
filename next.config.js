@@ -5,6 +5,7 @@ const withOptimizedImages = require('next-optimized-images')
 
 // Service Worker for Progressive Web App (PWA) standards
 const withOffline = require('next-offline')
+const withPlugins = require('next-compose-plugins');
 
 // .env Environment variables
 require("dotenv").config();
@@ -35,7 +36,7 @@ const themeVariables = lessToJS(fs.readFileSync(path.resolve(__dirname, './asset
 
 module.exports = withBundleAnalyzer(withOffline(withOptimizedImages(withCss(withLess({
    // Now by ZEIT deployment target
-   target: 'serverless',
+   // target: 'serverless',
    // Service Worker for Progressive Web App (PWA) standards
    transformManifest: manifest => ['/'].concat(manifest), // add the homepage to the cache
    // Trying to set NODE_ENV=production when running yarn dev causes a build-time error so we
@@ -135,4 +136,4 @@ module.exports = withBundleAnalyzer(withOffline(withOptimizedImages(withCss(with
 
       return config
    }
-})))), nextConfig);
+})))));

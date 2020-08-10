@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node imageOptimizer && next",
-    "build": "node imageOptimizer && next build",
-    "start": "node imageOptimizer && next start"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
   },
   "repository": {
     "type": "git",
