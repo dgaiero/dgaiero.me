@@ -141,6 +141,7 @@ class SiteHeader extends React.Component {
                   selectedKeys={this.state.selectedHeaderKeys}>
                   <Menu.Item key="/">Home</Menu.Item>
                   <Menu.Item key="/contact">Contact</Menu.Item>
+                  <Menu.Item key="/post/test">Test Post</Menu.Item>
                   {/* <Dropdown overlay={this.themeDropdownOverlay} style={{ float: "right" }}>
                      <Button onClick={e => e.preventDefault()}>
                         Theme <DownOutlined />

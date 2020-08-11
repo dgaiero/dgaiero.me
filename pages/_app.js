@@ -1,10 +1,13 @@
 // import App from 'next/app'
 
 import '../App.less'
+import '../assets/less/nprogress.less'
 
 import App from 'next/app';
 import Head from 'next/head'
+import NProgress from 'nprogress'; //nprogress module
 import { Provider } from 'react-redux';
+import Router from 'next/router';
 import WrenchIcon from '../components/icons/WrenchIcon'
 import { notification } from 'antd';
 import store from '../redux/store';
@@ -13,7 +16,10 @@ import withRedux from "next-redux-wrapper";
 // import { useEffect, useReducer, useState } from 'react'
 
 
-
+//Binding events. 
+Router.events.on('routeChangeStart', () => NProgress.start());
+Router.events.on('routeChangeComplete', () => NProgress.done());
+Router.events.on('routeChangeError', () => NProgress.done());
 
 
 export const AppContext = React.createContext({});
